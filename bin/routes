@@ -1,0 +1,11 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+
+GET 	/products 					controllers.Product.index
+GET 	/products/:productId 		controllers.Product.details(productId: String)
+GET 	/products/create 			controllers.Product.newProduct
+DELETE 	/products/:productId 		controllers.Product.delete(productId: String)

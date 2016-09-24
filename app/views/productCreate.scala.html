@@ -1,0 +1,13 @@
+
+@(productForm: Form[models.Product])
+@import helper._
+
+@main("Create Product"){
+	<h1>Product Creation</h1>
+	@helper.form(action = routes.Product.create()){
+		@helper.inputText(productForm("Product Id"))
+		@helper.inputText(productForm("Name"))
+		@helper.inputText(productForm("Description"))
+		<input type="submit" class="btn primary" value="Create">
+	}
+}
